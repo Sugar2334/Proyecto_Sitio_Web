@@ -12,7 +12,7 @@ router.get('/', function (req, res, next) {
 /* Logout */
 router.get('/logout', function (req, res, next) {
     req.session.destroy(); //destuir
-    res.redirect('/admin/login')
+    res.redirect('/')
 });
 
 router.post('/',async (req,res, next) => {
@@ -30,7 +30,7 @@ router.post('/',async (req,res, next) => {
 
             req.session.id_usuario = data.id;
             req.session.nombre = data.usuario;
-
+                
             res.redirect('/admin/novedades');
         } else {
             res.render('/admin/login',{

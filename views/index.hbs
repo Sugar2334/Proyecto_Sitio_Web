@@ -40,6 +40,14 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#Contacto">Contacto</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href=""></a>
+                        </li>
+                        <button class="btn btn-outline-success" type="submit">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/admin/login">Iniciar Sesion</a>
+                            </li>
+                        </button>
                     </ul>
                 </div>
             </div>
@@ -63,6 +71,37 @@
     </div>
     <img src="./images/cuts/cut-header.svg" alt="divisor de sectores">
 </header>
+
+<!-- Novedades -->
+<section class="container mb-5" id="Novedades">
+    <div class="row justify-content-md-center">
+        <div class="col-12 text-center">
+            <h2 class="text-warning text-uppercase h4">Novedades</h2>
+            <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, sequi?</h3>
+        </div>
+    </div>
+    <!--Seccion Novedades-->
+    <div id="novedades" class="row py-4">
+        <div class="">
+            <ul class="lista-novedades">
+                {{#each novedades}}
+                <li>
+                    <a href="javascript:void(0);" data-toggle="modal" data-target="#modal{{id}}">
+                        <img src="{{imagen}}">
+                        <div>
+                            <p class="novedades-titulo">{{titulo}}</p>
+                            <p class="novedades-subtitulo">{{subtitulo}}</p>
+                            <p class="novedades-cuerpo">{{cuerpo}}</p>
+                        </div>
+                    </a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    <!-- Fin Seccion Novedades-->
+</section>
+<!-- Fin de Novedades-->
 
 <!-- Juegos -->
 <section class="container" id="Juegos">
@@ -223,32 +262,37 @@
 <!-- Carousel -->
 
 <section class="carousel mb-5">
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="/images/parte1.jpg" class="d-block w-100" alt="...">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/images/parte1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="/images/parte2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="/images/parte3.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-    <div class="carousel-item">
-      <img src="/images/parte2.jpg" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="/images/parte3.jpg" class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
 </section>
 <!-- Features -->
 <section class="container mb-5" id="Servicios">
@@ -369,7 +413,7 @@
             <button type="submit" class="btn btn primary" id="boton">ENVIAR</button>
         </form>
         {{#if message}}
-            {{message }}
+        {{message }}
         {{/if}}
     </div>
 </section>

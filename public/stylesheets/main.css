@@ -23,6 +23,39 @@ a{
     height: 50vmin;
 }
 
+.lista-novedades li {
+    list-style: none;
+    margin-bottom: 16px;
+}
+
+.lista-novedades li a{
+    display: flex;
+}
+
+.novedades-titulo {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    margin-left: .6em;
+    margin-bottom: 0;
+}
+
+.novedades-subtitulo {
+    text-decoration: none;
+    color: #31384A;
+    margin-left: 1.3em;
+    font-size: 12px;
+    margin-bottom: .5em;
+}
+
+.novedades-cuerpo {
+    text-decoration: none;
+    color: #31384A;
+    margin-left: 1em;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
 /*SECTOR JUEGOS*/
 .card-img-filter {
     filter: brightness(0.5);
