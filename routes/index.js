@@ -32,7 +32,7 @@ router.get('/', async function (req, res, next) {
     } else {
       return {
         ...novedad,
-        imagen: '/images/no_imagen.png'
+        imagen: '/images/cancel.png'
       }
     }
   });
